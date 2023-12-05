@@ -23,7 +23,7 @@ export async function GET(
             url: 'http://sebbo.net/'
         });
 
-        const publicFolderPath = path.join("C:/Study/Testing/icalGen/my-app/", 'public');
+        const publicFolderPath = path.join(__dirname, 'public');
         const icalFilePath = path.join(publicFolderPath, 'calendar.ics');
         fs.writeFileSync(icalFilePath, calendar.toString());
 
